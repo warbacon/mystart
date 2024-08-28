@@ -3,13 +3,13 @@
 source ./util.sh
 
 packages=(
-    "hyprland"
-    "kitty"
-    "rofi-wayland"
-    "waybar"
-    "xdg-user-dirs"
-    "xdg-desktop-portal-gtk"
-    "xdg-desktop-portal-hyprland"
+    hyprland
+    kitty
+    rofi-wayland
+    waybar
+    xdg-user-dirs
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
 )
 
 ./setup_gtk.sh

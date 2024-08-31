@@ -1,0 +1,19 @@
+- hosts: localhost
+
+  tasks:
+    community.general.pacman:
+      name:
+        - curl
+        - eza
+        - fd
+        - ffmpeg
+        - fish
+        - fzf
+        - git
+        - imagemagick
+        - jq
+        - p7zip
+        - ripgrep
+        - starship
+        - trash-cli
+        - wget

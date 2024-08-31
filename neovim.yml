@@ -1,0 +1,20 @@
+- hosts: localhost
+  tasks:
+    - name: Install packages
+      become: true
+      community.general.pacman:
+        name: 
+          - curl
+          - fd
+          - neovim
+          - nodejs-lts-iron
+          - npm
+          - python
+          - ripgrep
+          - unzip
+          - wget
+          - wl-clipboard
+    - name: Clone Neovim config
+      ansible.builtin.git:
+        repo: https://github.com/warbacon/nvim-config
+        dest: "{{ ansible_env.HOME }}/.config/nvim"

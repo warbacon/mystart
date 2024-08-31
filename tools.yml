@@ -4,6 +4,7 @@
     community.general.pacman:
       name:
         - curl
+        - diff-so-fancy
         - eza
         - fd
         - ffmpeg
@@ -12,6 +13,7 @@
         - git
         - imagemagick
         - jq
+        - lazygit
         - p7zip
         - ripgrep
         - starship

@@ -11,6 +11,7 @@
           - npm
           - python
           - ripgrep
+          - ttf-nerd-fonts-symbols
           - unzip
           - wget
           - wl-clipboard

@@ -1,21 +1,24 @@
 - hosts: localhost
 
   tasks:
-    community.general.pacman:
-      name:
-        - curl
-        - diff-so-fancy
-        - eza
-        - fd
-        - ffmpeg
-        - fish
-        - fzf
-        - git
-        - imagemagick
-        - jq
-        - lazygit
-        - p7zip
-        - ripgrep
-        - starship
-        - trash-cli
-        - wget
+    - name: Install cli tools
+      become: yes
+      community.general.pacman:
+        name:
+          - curl
+          - diff-so-fancy
+          - dust
+          - eza
+          - fd
+          - ffmpeg
+          - fish
+          - fzf
+          - git
+          - imagemagick
+          - jq
+          - lazygit
+          - p7zip
+          - ripgrep
+          - starship
+          - trash-cli
+          - wget

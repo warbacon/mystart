@@ -1,9 +1,8 @@
 - hosts: localhost
 
   tasks:
-    - name: Setup GTK
-      include: gtk.yml
     - name: Install packages
+      become: yes
       community.general.pacman:
         name:
           - hyprland
@@ -14,12 +13,16 @@
           - xdg-desktop-portal-gtk
           - xdg-desktop-portal-hyprland
     - name: Create home folder folders
-      builtin.ansible.cmd: xdg-user-dirs-update
+      ansible.builtin.command: xdg-user-dirs-update
     - name: Clone dotfiles
       git:
         repo: https://github.com/warbacon/dotfiles
         dest: /tmp/dotfiles
     - name: Apply hypr config
-      builtin.ansible.copy:
+      ansible.builtin.copy:
         dest: "{{ ansible_env.HOME }}/.config"
         src: "/tmp/dotfiles/config/hypr"
+    - name: Apply waybar config
+      ansible.builtin.copy:
+        dest: "{{ ansible_env.HOME }}/.config"
+        src: "/tmp/dotfiles/config/waybar"

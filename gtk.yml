@@ -2,7 +2,6 @@
 
   tasks:
     - name: Install inter font
-      become: yes
       kewlfft.aur.aur:
         name: ttf-inter
     - name: Set GTK dark theme

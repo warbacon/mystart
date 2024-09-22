@@ -1,3 +1,4 @@
+---
 - hosts: localhost
 
   tasks:
@@ -5,13 +6,22 @@
       become: yes
       community.general.pacman:
         name:
+          - brightnessctl
+          - grim
+          - hypridle
           - hyprland
+          - hyprlock
           - kitty
+          - mako
           - rofi-wayland
+          - rofimoji
+          - slurp
+          - swww
           - waybar
-          - xdg-user-dirs
+          - wtype
           - xdg-desktop-portal-gtk
           - xdg-desktop-portal-hyprland
+          - xdg-user-dirs
     - name: Create home folder folders
       ansible.builtin.command: xdg-user-dirs-update
     - name: Clone dotfiles
@@ -26,3 +36,5 @@
       ansible.builtin.copy:
         dest: "{{ ansible_env.HOME }}/.config"
         src: "/tmp/dotfiles/config/waybar"
+    - name: Hide GTK titlebar buttons
+      ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences button-layout ''

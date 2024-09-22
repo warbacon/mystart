@@ -1,3 +1,4 @@
+---
 - hosts: localhost
 
   tasks:
@@ -5,20 +6,28 @@
       become: yes
       community.general.pacman:
         name:
+          - btop
           - curl
           - diff-so-fancy
           - dust
           - eza
+          - fastfetch
           - fd
           - ffmpeg
           - fish
           - fzf
           - git
+          - hyperfine
           - imagemagick
           - jq
           - lazygit
+          - less
+          - man-db
+          - man-pages
+          - man-pages-es
           - p7zip
           - ripgrep
           - starship
+          - tealdeer
           - trash-cli
           - wget

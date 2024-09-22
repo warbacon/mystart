@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name: Install AMDGPU packages
+      become: yes
+      community.general.pacman:
+        name:
+          - libva-mesa-driver
+          - mesa
+          - mesa-vdpau
+          - rocm-smi-lib
+          - vulkan-radeon
+

@@ -8,7 +8,6 @@
         name:
           - btop
           - curl
-          - diff-so-fancy
           - dust
           - eza
           - fastfetch

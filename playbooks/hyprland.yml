@@ -17,11 +17,13 @@
           - imv
           - kitty
           - libcanberra
+          - libnotify
           - pulsemixer
           - rofi-wayland
           - rofimoji
           - slurp
           - waybar
+          - wl-clip-persist
           - wtype
           - xdg-desktop-portal-gtk
           - xdg-desktop-portal-hyprland

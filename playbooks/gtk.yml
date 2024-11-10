@@ -2,17 +2,18 @@
 - hosts: localhost
 
   tasks:
+    - name: Install gtk3
+      become: true
+      community.general.pacman:
+        name:
+          - gtk3
     - name: Install inter font
       kewlfft.aur.aur:
         name: ttf-inter
     - name: Set GTK dark theme
-      community.general.dconf:
-          key: /org/gnome/desktop/interface/color-scheme
-          value: "'prefer-dark'"
+      ansible.builtin.command: gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     - name: Set GTK font to Inter
-      ansible.builtin.dconf:
-        key: /org/gnome/desktop/interface/font-name
-        value: "'Inter Variable 11'"
+      ansible.builtin.command: gsettings set org.gnome.desktop.interface font-name 'Inter Variable 11'
     - name: Create GTK 3.0 configuration directory if it does not exist
       ansible.builtin.file:
         path: "{{ ansible_env.HOME }}/.config/gtk-3.0"

@@ -3,27 +3,27 @@
 
   tasks:
     - name: Install cli tools
-      become: yes
+      become: true
       community.general.pacman:
         name:
+          - base-devel
           - btop
           - curl
           - dust
           - eza
           - fastfetch
           - fd
-          - ffmpeg
           - fish
           - fzf
           - git
           - hyperfine
-          - imagemagick
           - jq
           - lazygit
           - less
           - man-db
           - man-pages
           - man-pages-es
+          - mpv
           - p7zip
           - ripgrep
           - starship

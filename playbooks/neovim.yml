@@ -6,9 +6,9 @@
       community.general.pacman:
         name: 
           - curl
-          - fd
+          - gcc
+          - make
           - neovim
-          - nodejs-lts-iron
           - npm
           - python
           - ripgrep

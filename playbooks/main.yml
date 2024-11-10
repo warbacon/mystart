@@ -10,6 +10,8 @@
   ansible.builtin.import_playbook: hyprland.yml
 - name: Setup gtk
   ansible.builtin.import_playbook: gtk.yml
+- name: Setup qt
+  ansible.builtin.import_playbook: qt.yml
 - name: Install tools
   ansible.builtin.import_playbook: tools.yml
 - name: Install and setup Neovim

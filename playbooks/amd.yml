@@ -6,9 +6,6 @@
       become: true
       community.general.pacman:
         name:
-          - libva-mesa-driver
           - mesa
-          - mesa-vdpau
-          - mesa-vdpau
           - rocm-smi-lib
           - vulkan-radeon

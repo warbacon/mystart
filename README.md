@@ -1,3 +1,5 @@
-# MYSTART
+# My Start v2.0
 
-Work in progress ⚙️
+```sh
+python -m mystart
+```

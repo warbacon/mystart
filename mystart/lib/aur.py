@@ -1,6 +1,6 @@
 from shutil import which
 import subprocess
-from . import git
+from mystart.lib import git
 
 
 def install_paru():

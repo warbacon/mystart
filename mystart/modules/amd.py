@@ -1,12 +1,16 @@
 from mystart.lib import pacman
+from mystart.lib.base import ModuleBase
+from typing import final, override
 
 
-packages = [
-    "mesa",
-    "rocm-smi-lib",
-    "vulkan-radeon",
-]
+@final
+class AMD(ModuleBase):
+    packages = [
+        "mesa",
+        "rocm-smi-lib",
+        "vulkan-radeon",
+    ]
 
-
-def run():
-    pacman.install_packages(packages)
+    @override
+    def run(self) -> None:
+        pacman.install_packages(self.packages)

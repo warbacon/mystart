@@ -1,6 +1,6 @@
 from shutil import which
 import subprocess
-from . import pacman
+from mystart.lib import pacman
 
 
 def clone(url: str, directory: str = ""):

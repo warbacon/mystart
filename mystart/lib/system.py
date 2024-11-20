@@ -1,7 +1,6 @@
-import subprocess
+from mystart.lib import pacman
 from shutil import which
-
-from . import pacman
+import subprocess
 
 
 def gsettings_set(path: str, key: str, value: str):

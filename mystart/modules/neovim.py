@@ -22,4 +22,4 @@ class Neovim(ModuleBase):
     @override
     def run(self) -> None:
         pacman.install_packages(self.packages)
-        git.github_clone("warbacon/config", f"{os.getenv("HOME")}/.config/nvim")
+        git.github_clone("warbacon/nvim-config", f"{os.getenv("HOME")}/.config/nvim")
